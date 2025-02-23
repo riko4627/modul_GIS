@@ -14,6 +14,13 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+
+                <li class="nav-item {{ request()->is('streetfood*') ? 'active' : '' }}">
+                    <a href="{{ url('/streetfood') }}">
+                        <i class="fas fa-hamburger"></i> <!-- Burger -->
+                        <p>Streetfood</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
