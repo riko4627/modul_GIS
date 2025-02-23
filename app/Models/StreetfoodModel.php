@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class StreetfoodModel extends Model
 {
     use HasFactory, HasUuids;
-    protected $table = 'tb_gis_streetfoods';
+    protected $table = 'tb_streetfoods';
     protected $fillable = [
         'id_streetfoods',
         'sub_district',
@@ -18,7 +18,7 @@ class StreetfoodModel extends Model
         'created_at',
         'updated_at',
     ];
-    public function tailor()
+    public function streetfood()
     {
         return $this->belongsTo(StreetfoodModel::class, 'id_streetfoods');
     }
